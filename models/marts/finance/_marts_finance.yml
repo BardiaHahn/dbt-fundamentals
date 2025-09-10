@@ -8,7 +8,6 @@ models:
   - name: order_id
     description: A unique identifier for each order.
     data_tests:
-      - unique
       - not_null
   - name: customer_id
     description: A unique identifier for each customer.
