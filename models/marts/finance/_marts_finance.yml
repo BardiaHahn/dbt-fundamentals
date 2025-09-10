@@ -1,0 +1,28 @@
+models:
+- name: fct_orders
+  description: This model consolidates order and payment data to provide insights
+    into customer purchasing behavior. It calculates the total amount spent per order
+    and the lifetime value of each customer, which can be used for customer segmentation
+    and sales analysis.
+  columns:
+  - name: order_id
+    description: A unique identifier for each order.
+    data_tests:
+      - unique
+      - not_null
+  - name: customer_id
+    description: A unique identifier for each customer.
+    data_tests:
+      - not_null
+  - name: order_date
+    description: The date when the order was placed.
+    data_tests:
+      - not_null
+  - name: amount
+    description: The total amount of the order in USD.
+    data_tests:
+      - not_null
+  - name: lifetime_value
+    description: The total amount spent by the customer across all orders.
+    data_tests:
+      - not_null
